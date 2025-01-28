@@ -59,7 +59,7 @@ const processData = (data) => {
 
     const fetchAnalysis = async () => {
       try {
-        const response = await axios.post('http://localhost:3000/analyze', { link: state.link });
+        const response = await axios.post('https://ytcomment-ttqb.onrender.com', { link: state.link });
         const processedData = processData(response.data); // Process the fetched data
         setAnalysisData(processedData);
         console.log(processedData);
